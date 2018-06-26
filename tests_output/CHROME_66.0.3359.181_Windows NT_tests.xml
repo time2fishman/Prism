@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="2">
+
+  <testsuite name="tests"
+    errors="0" failures="0" hostname="" id="" package="tests" skipped="0"
+    tests="2" time="16.25" timestamp="Mon, 04 Jun 2018 22:53:55 GMT">
+  
+    <testcase name="Account page UI check" classname="tests" time="10.46" assertions="12">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="DAS Sign in UI check" classname="tests" time="5.791" assertions="6">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
