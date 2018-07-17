@@ -5,7 +5,7 @@ const functions = require('../test_assets/functions')
 module.exports = {
 
     beforeEach: browser => {
-        browser.url('https://prism.dassharedservices.com')
+        browser.url('https://dev5.marketstar.com/PrismReview')
     },
 
     after: browser => {
