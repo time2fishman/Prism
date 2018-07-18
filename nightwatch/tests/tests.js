@@ -44,13 +44,7 @@ module.exports = {
         browser
             .verify.visible(selectors.signInPage.mks.signInButton)
             .verify.containsText(selectors.signInPage.mks.signInButton, 'Sign in')
-    //},
-
-    // 'Marketstar sign in': browser => {
         browser
-            // .useCss()
-            // .pause(3000)
-            // .click(selectors.accountPage.mkstxt)
             .setValue(selectors.signInPage.mks.userNameInput, '')
             .setValue(selectors.signInPage.mks.passwordInput, '')
             .pause(3000)
