@@ -31,7 +31,27 @@ module.exports = {
         }
     },
 
-    homePage: {
-        createNewButton: 'button[title="Create New"]'
-    }
+    header: {
+        prismLogo: 'img[alt="logo"]',
+        humanResources: {
+            humanResourcesDropDown: '/html/body/div[1]/div/div[2]/ul[1]/li[1]/a',
+            cancelHire: 'a[href="/PrismReview/Onboarding/CancelHire"]',
+            contactSearch: 'a[href="PrismReview/Contacts/Search"]',
+            internalJobTitles: 'a[href="/PrismReview/InternalJobTitle"]',
+            jobGrades: 'a[href="/PrismReview/JobGrade"]',
+            organizationLevels: 'a[href="/PrismReview/Roles/WithoutOrganizationLevels"]',
+            projectJobTitles: 'a[href="/PrismReview/InternalJobTitle/Projects"]',
+            roleSearch: 'a[href="/PrismReview/Roles/Search"]',
+            suspensions: 'a[href="/PrismReview/Suspension"]',
+            transferRequests: 'a[href="/PrismReview/TransferRequests"]',
+        }
+    },
+
+    internalJobTitlesPage: {
+
+        createNewButton: 'button[title="Create New"]',
+
+    },
+
+
 }
