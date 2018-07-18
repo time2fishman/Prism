@@ -5,9 +5,9 @@
 
   <testsuite name="tests"
     errors="0" failures="0" hostname="" id="" package="tests" skipped="0"
-    tests="2" time="5.712" timestamp="Tue, 17 Jul 2018 22:58:09 GMT">
+    tests="2" time="11.50" timestamp="Wed, 18 Jul 2018 20:51:43 GMT">
   
-    <testcase name="Account page UI check" classname="tests" time="5.216" assertions="12">
+    <testcase name="Account page UI check" classname="tests" time="5.406" assertions="12">
 
     
 
@@ -34,7 +34,9 @@
     
     </testcase>
   
-    <testcase name="DAS Sign in UI check" classname="tests" time="0.4960" assertions="6">
+    <testcase name="MKS Sign in UI check" classname="tests" time="6.095" assertions="7">
+
+    
 
     
 

@@ -21,6 +21,17 @@ module.exports = {
             dasPassword: 'input[id="passwordInput"]',
             submitButton: 'span[id="submitButton"]',
             help: 'a[id="helpDesk"]',
+        },
+
+        mks: {
+            mksIcon: 'img[alt="DAS Shared Services"]',
+            userNameInput: 'input[id="userNameInput"]',
+            passwordInput: 'input[id="passwordInput"]',
+            signInButton: 'span[id="submitButton"]'
         }
+    },
+
+    homePage: {
+        createNewButton: 'button[title="Create New"]'
     }
 }

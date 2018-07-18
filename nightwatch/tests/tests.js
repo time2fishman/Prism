@@ -30,19 +30,31 @@ module.exports = {
             .useCss()
     },
 
-    'DAS Sign in UI check': browser => {
+    'MKS Sign in check': browser => {
         browser
             .useCss()
             .verify.visible(selectors.accountPage.logo)
             .useXpath()
             // .verify.containsText(selectors.signInPage.das.loginMessage, 'Sign in with your organizational account')
-            .click(selectors.accountPage.dasText)
+            .click(selectors.accountPage.mkstxt)
             .useCss()
-            .waitForElementVisible(selectors.signInPage.das.dasUsername, 3000)
-            .expect.element(selectors.signInPage.das.dasUsername).to.have.attribute('placeholder').equals('someone@example.com')
-        browser.expect.element(selectors.signInPage.das.dasPassword).to.have.attribute('placeholder').equals('Password')
+            .waitForElementVisible(selectors.signInPage.mks.userNameInput, 3000)
+            .expect.element(selectors.signInPage.mks.userNameInput).to.have.attribute('placeholder').equals('someone@example.com')
+        browser.expect.element(selectors.signInPage.mks.passwordInput).to.have.attribute('placeholder').equals('Password')
         browser
-            .verify.visible(selectors.signInPage.das.submitButton)
-            .verify.containsText(selectors.signInPage.das.submitButton, 'Sign in')
-    }       
+            .verify.visible(selectors.signInPage.mks.signInButton)
+            .verify.containsText(selectors.signInPage.mks.signInButton, 'Sign in')
+    //},
+
+    // 'Marketstar sign in': browser => {
+        browser
+            // .useCss()
+            // .pause(3000)
+            // .click(selectors.accountPage.mkstxt)
+            .setValue(selectors.signInPage.mks.userNameInput, '')
+            .setValue(selectors.signInPage.mks.passwordInput, '')
+            .pause(3000)
+            .click(selectors.signInPage.mks.signInButton)
+            .verify.visible(selectors.homePage.createNewButton)
+    }
 }
