@@ -36,7 +36,7 @@ module.exports = {
         humanResources: {
             humanResourcesDropDown: '/html/body/div[1]/div/div[2]/ul[1]/li[1]/a',
             cancelHire: 'a[href="/PrismReview/Onboarding/CancelHire"]',
-            contactSearch: 'a[href="PrismReview/Contacts/Search"]',
+            contactSearch: '/html/body/div[1]/div/div[2]/ul[1]/li[1]/ul/li[2]/a',
             internalJobTitles: 'a[href="/PrismReview/InternalJobTitle"]',
             jobGrades: 'a[href="/PrismReview/JobGrade"]',
             organizationLevels: 'a[href="/PrismReview/Roles/WithoutOrganizationLevels"]',
@@ -44,7 +44,10 @@ module.exports = {
             roleSearch: 'a[href="/PrismReview/Roles/Search"]',
             suspensions: 'a[href="/PrismReview/Suspension"]',
             transferRequests: 'a[href="/PrismReview/TransferRequests"]',
-        }
+        },
+        employeeSearch: 'a[href="/PrismReview/Employee/Search"]'
+        
+        
     },
 
     internalJobTitlesPage: {
@@ -52,6 +55,15 @@ module.exports = {
         createNewButton: 'button[title="Create New"]',
 
     },
+
+    employeeSearchPage: {
+        employeeSearchTitle: '/html/body/div[2]/div/h2',
+        searchField: 'input[name="query"]',
+        searchButton: 'input[type="submit"]',
+        searchResults: '//*[@id="results"]/table/tbody/tr[2]/td[1]'
+
+
+    }
 
 
 }
