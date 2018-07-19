@@ -45,7 +45,8 @@ module.exports = {
             suspensions: 'a[href="/PrismReview/Suspension"]',
             transferRequests: 'a[href="/PrismReview/TransferRequests"]',
         },
-        employeeSearch: 'a[href="/PrismReview/Employee/Search"]'
+        employeeSearch: 'a[href="/PrismReview/Employee/Search"]',
+        administrationTab: 'a[href="/PrismReview/Administration"]'
         
         
     },
@@ -60,10 +61,36 @@ module.exports = {
         employeeSearchTitle: '/html/body/div[2]/div/h2',
         searchField: 'input[name="query"]',
         searchButton: 'input[type="submit"]',
-        searchResults: '//*[@id="results"]/table/tbody/tr[2]/td[1]'
+        searchResults: 'a[href="/PrismReview/Employee/Details/61045'
 
 
+    },
+
+    employeePage: {
+        employeeNameTitle: '/html/body/div[2]/div/h2',
+        nameField: '//*[@id="mainForm"]/div[1]/div[1]/div/div',
+
+    },
+
+    administrationPage: {
+        administrationTitle: '/html/body/div[2]/div/h2',
+        contactSearch: 'a[href="/PrismReview/Contacts/Search"]',
+
+    },
+
+    contactSearchPage: {
+        contactSearchTitle: '/html/body/div[2]/div/h2',
+        searchField: 'input[name="query"]',
+        searchButton: 'input[type="submit"]',
+        impersonateButton: '/html/body/div[3]/table/tbody/tr[2]/td[6]/a[6]/i',
+    },
+
+    employeesIManagePage: {
+        managersNameEmployeesTitle: '/html/body/div[2]/div/h2',
+        pageBody: 'div[class="container body-content"]',
+        managersEmployeesButton: 'a[href="/PrismReview/HiringManager/Index/559"]'
     }
+
 
 
 }

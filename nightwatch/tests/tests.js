@@ -1,6 +1,7 @@
 const selectors = require('../test_assets/selectors')
 const data = require('../test_assets/data')
 const functions = require('../test_assets/functions')
+const clickByText = require('../../customCommands/clickByText')
 
 module.exports = {
 
@@ -52,9 +53,9 @@ module.exports = {
         browser
             .setValue(selectors.signInPage.mks.userNameInput, '')
             .setValue(selectors.signInPage.mks.passwordInput, '')
-            .pause(1000)
             .click(selectors.signInPage.mks.signInButton)
-            .verify.visible(selectors.internalJobTitlesPage.createNewButton)
+            .waitForElementVisible(selectors.internalJobTitlesPage.createNewButton, 3000)
+            // .verify.visible(selectors.internalJobTitlesPage.createNewButton)
     },
 
     //This test checks that all elements are present in the Header and that the text says what it should on each element.
@@ -86,11 +87,11 @@ module.exports = {
             .verify.containsText(selectors.header.humanResources.suspensions, 'Suspensions')
             .verify.visible(selectors.header.humanResources.transferRequests)
             .verify.containsText(selectors.header.humanResources.transferRequests, 'Transfer Requests')
-            //Need to add finance, tasks, emplyee search, administration, help, and name drop down
+        //Need to add finance, tasks, emplyee search, administration, help, and name drop down
     },
 
-    //This test executes a basic 'employee search'
-    '1. Employee Search: find contact by first name, given name, last name': browser => {
+    //This test executes a basic 'employee search' and makes sure they are in the results.
+    '1. Employee Search: find contact by first and last name': browser => {
         browser
             .click(selectors.header.employeeSearch)
             .useXpath()
@@ -99,9 +100,50 @@ module.exports = {
             .useCss()
             .setValue(selectors.employeeSearchPage.searchField, 'Cameron Smart')
             .click(selectors.employeeSearchPage.searchButton)
-            .useXpath()
+            // .useXpath()
             .waitForElementVisible(selectors.employeeSearchPage.searchResults, 3000)
             .verify.containsText(selectors.employeeSearchPage.searchResults, 'Cam Smart')
+    },
+
+    //After searching for the employee, clicking their name should load that employees page.
+    '2. Employee Search: clicking Name link loads employee info and tasks page': browser => {
+        browser
+            .clickByText(selectors.employeeSearchPage.searchResults, 'Cam Smart')
+            .useXpath()
+            .waitForElementVisible(selectors.employeePage.employeeNameTitle, 3000)
+            .verify.visible(selectors.employeePage.nameField)
+            .verify.containsText(selectors.employeePage.nameField, 'Cam Smart')
+    },
+
+    //Checks if the downline employees icon works while impersonating a manager
+    '3. Impersonation button and managers employees button check': browser => {
+        browser
+            .useCss()
+            .click(selectors.header.administrationTab)
+            .useXpath()
+            .waitForElementVisible(selectors.administrationPage.administrationTitle, 3000)
+            .verify.containsText(selectors.administrationPage.administrationTitle, 'Administration')
+            .useCss()
+            .clickByText(selectors.administrationPage.contactSearch, 'Contact Search')
+            .pause(500)
+            .useXpath()
+            .verify.containsText(selectors.contactSearchPage.contactSearchTitle, 'Contact Search')
+            .useCss()
+            .setValue(selectors.contactSearchPage.searchField, 'Russ Reed')  
+            .click(selectors.contactSearchPage.searchButton)  
+            .useXpath()
+            .waitForElementVisible(selectors.contactSearchPage.impersonateButton, 3000)
+            .click(selectors.contactSearchPage.impersonateButton)
+            .pause(500)
+            .verify.containsText(selectors.employeesIManagePage.managersNameEmployeesTitle, 'Russ Reed\'s Employees')
+            .useCss()
+            .verify.containsText(selectors.employeesIManagePage.pageBody, 'Diane Graybeal')
+            // .clickByText(selectors.employeesIManagePage.pageBody, 'Diane Graybeal') not working. Gonna have to narrow down the selector.
+
+
+
+
 
     }
+
 }
