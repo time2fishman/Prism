@@ -1,7 +1,8 @@
 module.exports = {
 
     globals: {
-        assignWorkspaceButton: 'a[title="Assign Workspace"]'
+        assignWorkspaceButton: 'a[title="Assign Workspace"]',
+        employmentHistoryButton: 'a[title="Employment History"]'
     },
 
     accountPage: {
@@ -104,6 +105,11 @@ module.exports = {
         newWorkspaceLabel: 'label[for="newWorkspace"]',
         backButton: 'a[title="Back"]'
 
+    },
+
+    employmentHistoryPage: {
+        prismEmployeeRecords: '/html/body/div[3]/div[5]/h3',
+        emloyementHistoryTitle: '/html/body/div[2]/div/h2'
     }
 
 

@@ -50,8 +50,8 @@ module.exports = {
             .verify.visible(selectors.signInPage.mks.signInButton)
             .verify.containsText(selectors.signInPage.mks.signInButton, 'Sign in')
         browser
-            .setValue(selectors.signInPage.mks.userNameInput, 'amartinez@marketstar.com')
-            .setValue(selectors.signInPage.mks.passwordInput, 'Stacy.Piper.Jake1')
+            .setValue(selectors.signInPage.mks.userNameInput, '')
+            .setValue(selectors.signInPage.mks.passwordInput, '')
             .click(selectors.signInPage.mks.signInButton)
             .waitForElementVisible(selectors.internalJobTitlesPage.createNewButton, 3000)
         // .verify.visible(selectors.internalJobTitlesPage.createNewButton)
@@ -167,11 +167,21 @@ module.exports = {
             .click(selectors.globals.assignWorkspaceButton)
             .waitForElementVisible(selectors.assignWorkspacePage.newWorkspaceLabel, 3000)
             .verify.containsText(selectors.assignWorkspacePage.newWorkspaceLabel, 'New Workspace')
+    },
+
+    '5. Employment History: Button works, page loads': browser => {
+        browser
             .click(selectors.assignWorkspacePage.backButton)
-
-
-
-
+            .waitForElementVisible(selectors.employeeSearchPage.searchButton, 3000)
+            .setValue(selectors.employeeSearchPage.searchField, 'Cameron Smart')
+            .click(selectors.employeeSearchPage.searchButton)
+            .waitForElementVisible(selectors.employeeSearchPage.searchResults, 3000)
+            .verify.visible(selectors.globals.employmentHistoryButton)
+            .click(selectors.globals.employmentHistoryButton)
+            .useXpath()
+            .waitForElementVisible(selectors.employmentHistoryPage.prismEmployeeRecords, 3000)
+            .verify.containsText(selectors.employmentHistoryPage.prismEmployeeRecords, 'Prism Employee Records')
+            .verify.containsText(selectors.employmentHistoryPage.emloyementHistoryTitle, 'Employment History – Cameron John Marvin Smart')
     }
 
 }
