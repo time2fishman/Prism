@@ -1,5 +1,9 @@
 module.exports = {
 
+    globals: {
+        assignWorkspaceButton: 'a[title="Assign Workspace"]'
+    },
+
     accountPage: {
         logo: 'img[class="logoImage"]',
         signInWithWhichAccountText: 'div[class="groupMargin"]',
@@ -46,9 +50,12 @@ module.exports = {
             transferRequests: 'a[href="/PrismReview/TransferRequests"]',
         },
         employeeSearch: 'a[href="/PrismReview/Employee/Search"]',
-        administrationTab: 'a[href="/PrismReview/Administration"]'
-        
-        
+        administrationTab: 'a[href="/PrismReview/Administration"]',
+        name: {
+            currentName: '/html/body/div[1]/div/div[2]/ul[2]/li/a',
+            stopImpersonating: 'a[href="/PrismReview/Home/StopImpersonating"]',
+            signOut: 'a[href="/PrismReview/Home/SignOut"]'
+        }
     },
 
     internalJobTitlesPage: {
@@ -69,6 +76,7 @@ module.exports = {
     employeePage: {
         employeeNameTitle: '/html/body/div[2]/div/h2',
         nameField: '//*[@id="mainForm"]/div[1]/div[1]/div/div',
+        dGraybealsEmployeesButton: 'a[href="/PrismReview/HiringManager/Index/559"]'
 
     },
 
@@ -87,8 +95,15 @@ module.exports = {
 
     employeesIManagePage: {
         managersNameEmployeesTitle: '/html/body/div[2]/div/h2',
-        pageBody: 'div[class="container body-content"]',
-        managersEmployeesButton: 'a[href="/PrismReview/HiringManager/Index/559"]'
+        pageBody: '//*[@id="roles"]/div[4]/div',
+        dianeGraybeal: 'a[href="/PrismReview/Employee/Details/14909"]',
+        dGraybealsEmployeesButton: 'a[href="/PrismReview/HiringManager/Index/559"]'
+    },
+
+    assignWorkspacePage: {
+        newWorkspaceLabel: 'label[for="newWorkspace"]',
+        backButton: 'a[title="Back"]'
+
     }
 
 

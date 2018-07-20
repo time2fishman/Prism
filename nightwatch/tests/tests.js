@@ -1,7 +1,6 @@
 const selectors = require('../test_assets/selectors')
-const data = require('../test_assets/data')
-const functions = require('../test_assets/functions')
-const clickByText = require('../../customCommands/clickByText')
+// const data = require('../test_assets/data')
+// const functions = require('../test_assets/functions')
 
 module.exports = {
 
@@ -51,11 +50,11 @@ module.exports = {
             .verify.visible(selectors.signInPage.mks.signInButton)
             .verify.containsText(selectors.signInPage.mks.signInButton, 'Sign in')
         browser
-            .setValue(selectors.signInPage.mks.userNameInput, '')
-            .setValue(selectors.signInPage.mks.passwordInput, '')
+            .setValue(selectors.signInPage.mks.userNameInput, 'amartinez@marketstar.com')
+            .setValue(selectors.signInPage.mks.passwordInput, 'Stacy.Piper.Jake1')
             .click(selectors.signInPage.mks.signInButton)
             .waitForElementVisible(selectors.internalJobTitlesPage.createNewButton, 3000)
-            // .verify.visible(selectors.internalJobTitlesPage.createNewButton)
+        // .verify.visible(selectors.internalJobTitlesPage.createNewButton)
     },
 
     //This test checks that all elements are present in the Header and that the text says what it should on each element.
@@ -100,7 +99,6 @@ module.exports = {
             .useCss()
             .setValue(selectors.employeeSearchPage.searchField, 'Cameron Smart')
             .click(selectors.employeeSearchPage.searchButton)
-            // .useXpath()
             .waitForElementVisible(selectors.employeeSearchPage.searchResults, 3000)
             .verify.containsText(selectors.employeeSearchPage.searchResults, 'Cam Smart')
     },
@@ -129,17 +127,47 @@ module.exports = {
             .useXpath()
             .verify.containsText(selectors.contactSearchPage.contactSearchTitle, 'Contact Search')
             .useCss()
-            .setValue(selectors.contactSearchPage.searchField, 'Russ Reed')  
-            .click(selectors.contactSearchPage.searchButton)  
+            .setValue(selectors.contactSearchPage.searchField, 'Russ Reed')
+            .click(selectors.contactSearchPage.searchButton)
             .useXpath()
             .waitForElementVisible(selectors.contactSearchPage.impersonateButton, 3000)
             .click(selectors.contactSearchPage.impersonateButton)
             .pause(500)
             .verify.containsText(selectors.employeesIManagePage.managersNameEmployeesTitle, 'Russ Reed\'s Employees')
-            .useCss()
             .verify.containsText(selectors.employeesIManagePage.pageBody, 'Diane Graybeal')
-            // .clickByText(selectors.employeesIManagePage.pageBody, 'Diane Graybeal') not working. Gonna have to narrow down the selector.
+            .useCss()
+            .clickByText(selectors.employeesIManagePage.dianeGraybeal, 'Diane Graybeal')
+            .useXpath()
+            .waitForElementVisible(selectors.employeePage.nameField, 3000)
+            .verify.containsText(selectors.employeePage.nameField, 'Diane Graybeal')
+            .useCss()
+            .click(selectors.employeesIManagePage.dGraybealsEmployeesButton)
+            .useXpath()
+            .waitForElementVisible(selectors.employeesIManagePage.managersNameEmployeesTitle, 3000)
+            .verify.visible(selectors.employeesIManagePage.managersNameEmployeesTitle, 'Diane Graybeals\'s Employees')
+            .click(selectors.header.name.currentName)
+            .useCss()
+            .click(selectors.header.name.stopImpersonating)
+    },
 
+    //Checks the "Assign Workspace" button and page load
+    '4. Assign Workspace: Button works, page loads': browser => {
+        browser
+            .waitForElementVisible(selectors.header.employeeSearch, 3000)
+            .useXpath()
+            .verify.containsText(selectors.header.name.currentName, 'Adam Martinez')
+            .useCss()
+            .click(selectors.header.employeeSearch)
+            .useXpath()
+            .waitForElementVisible(selectors.employeeSearchPage.employeeSearchTitle, 3000)
+            .useCss()
+            .setValue(selectors.employeeSearchPage.searchField, 'Cameron Smart')
+            .click(selectors.employeeSearchPage.searchButton)
+            .verify.visible(selectors.employeeSearchPage.searchResults)
+            .click(selectors.globals.assignWorkspaceButton)
+            .waitForElementVisible(selectors.assignWorkspacePage.newWorkspaceLabel, 3000)
+            .verify.containsText(selectors.assignWorkspacePage.newWorkspaceLabel, 'New Workspace')
+            .click(selectors.assignWorkspacePage.backButton)
 
 
 
