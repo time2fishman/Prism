@@ -77,7 +77,7 @@ module.exports = {
     employeePage: {
         employeeNameTitle: '/html/body/div[2]/div/h2',
         nameField: '//*[@id="mainForm"]/div[1]/div[1]/div/div',
-        dGraybealsEmployeesButton: 'a[href="/PrismReview/HiringManager/Index/559"]'
+        dGraybealsEmployeesButton: 'a[href="/PrismReview/HiringManager/Index/559"]',
 
     },
 
@@ -109,8 +109,9 @@ module.exports = {
 
     employmentHistoryPage: {
         prismEmployeeRecords: '/html/body/div[3]/div[5]/h3',
-        emloyementHistoryTitle: '/html/body/div[2]/div/h2'
-    }
+        emloyementHistoryTitle: '/html/body/div[2]/div/h2',
+        viewButton: 'a[title="View"]'
+    },
 
 
 

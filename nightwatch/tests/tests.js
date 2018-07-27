@@ -182,6 +182,17 @@ module.exports = {
             .waitForElementVisible(selectors.employmentHistoryPage.prismEmployeeRecords, 3000)
             .verify.containsText(selectors.employmentHistoryPage.prismEmployeeRecords, 'Prism Employee Records')
             .verify.containsText(selectors.employmentHistoryPage.emloyementHistoryTitle, 'Employment History – Cameron John Marvin Smart')
+    },
+
+    '6. Employment History: View Icon button works, page loads': browser => {
+        browser
+            .useCss()
+            .click(selectors.employmentHistoryPage.viewButton)
+            .useXpath()
+            .waitForElementVisible(selectors.employeePage.nameField, 3000)
+            .verify.containsText(selectors.employeePage.nameField, 'Cam Smart')
     }
+
+
 
 }
