@@ -2,7 +2,8 @@ module.exports = {
 
     globals: {
         assignWorkspaceButton: 'a[title="Assign Workspace"]',
-        employmentHistoryButton: 'a[title="Employment History"]'
+        employmentHistoryButton: 'a[title="Employment History"]',
+        chooseEmployeeToMergeAlert: '/html/body/div[3]/div[4]',
     },
 
     accountPage: {
@@ -78,6 +79,8 @@ module.exports = {
         employeeNameTitle: '/html/body/div[2]/div/h2',
         nameField: '//*[@id="mainForm"]/div[1]/div[1]/div/div',
         dGraybealsEmployeesButton: 'a[href="/PrismReview/HiringManager/Index/559"]',
+        cancelButton: '//*[@id="mainForm"]/div[2]/div[2]/a',
+        
 
     },
 
@@ -110,7 +113,11 @@ module.exports = {
     employmentHistoryPage: {
         prismEmployeeRecords: '/html/body/div[3]/div[5]/h3',
         emloyementHistoryTitle: '/html/body/div[2]/div/h2',
-        viewButton: 'a[title="View"]'
+        viewButton: 'a[title="View"]',
+        mergeButton: 'a[title="Merge"]',
+        tranferredFromButton: 'a[title="Transferred From This Employee Record"]',
+        transferredToButton: 'a[title="Transferred To This Employee Record"]'
+
     },
 
 

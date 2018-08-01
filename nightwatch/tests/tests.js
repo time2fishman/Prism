@@ -168,7 +168,7 @@ module.exports = {
             .waitForElementVisible(selectors.assignWorkspacePage.newWorkspaceLabel, 3000)
             .verify.containsText(selectors.assignWorkspacePage.newWorkspaceLabel, 'New Workspace')
     },
-
+    //Checks the "Employment History" button and page load
     '5. Employment History: Button works, page loads': browser => {
         browser
             .click(selectors.assignWorkspacePage.backButton)
@@ -183,16 +183,32 @@ module.exports = {
             .verify.containsText(selectors.employmentHistoryPage.prismEmployeeRecords, 'Prism Employee Records')
             .verify.containsText(selectors.employmentHistoryPage.emloyementHistoryTitle, 'Employment History – Cameron John Marvin Smart')
     },
-
+    //Checks the "View" button and page load
     '6. Employment History: View Icon button works, page loads': browser => {
         browser
             .useCss()
             .click(selectors.employmentHistoryPage.viewButton)
             .useXpath()
             .waitForElementVisible(selectors.employeePage.nameField, 3000)
+            .pause(3000)
             .verify.containsText(selectors.employeePage.nameField, 'Cam Smart')
-    }
+    },
+    //Checks the "Merge" button, whether the merge's work or not and the page load
+    '7. Employee History: Merge button works, page loads': browser => {
+        browser
+            .click(selectors.employeePage.cancelButton)
+            // .pause(3000)
+            .waitForElementVisible(selectors.employmentHistoryPage.prismEmployeeRecords, 3000)
+            .useCss()
+            .click(selectors.employmentHistoryPage.mergeButton)
+            .pause(10000)
+            .useXpath()
+            .waitForElementVisible(selectors.globals.chooseEmployeeToMergeAlert, 3000)
+            .verfiy.containsText(selectors.globals.chooseEmployeeToMergeAlert, 'Choose which employee record to merge with.')
 
+
+    }
+    
 
 
 }
