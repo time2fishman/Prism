@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="10">
+
+  <testsuite name="tests"
+    errors="1" failures="0" hostname="" id="" package="tests" skipped="0"
+    tests="10" time="28.55" timestamp="Fri, 03 Aug 2018 00:32:25 GMT">
+  
+    <testcase name="Account page UI check" classname="tests" time="6.542" assertions="12">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="MKS Sign in check" classname="tests" time="2.715" assertions="7">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Header UI check" classname="tests" time="1.023" assertions="21">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="1. Employee Search: find contact by first and last name" classname="tests" time="1.787" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="2. Employee Search: clicking Name link loads employee info and tasks page" classname="tests" time="1.480" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="3. Impersonation button and managers employees button check" classname="tests" time="9.336" assertions="10">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="4. Assign Workspace: Button works, page loads" classname="tests" time="2.813" assertions="6">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="5. Employment History: Button works, page loads" classname="tests" time="2.022" assertions="6">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="6. Employment History: View Icon button works, page loads" classname="tests" time="0.8250" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="GUID test" classname="tests" time="0.003000" assertions="0">
+    </testcase>
+  
+
+  
+    <system-err>
+        Error while running [Tests / GUID test]:
+
+  ReferenceError: guid is not defined
+    at Object.GUID test (C:\Users\amartinez\Documents\QA\Prism\nightwatch\tests\tests.js:234:43)
+    at Module.call (C:\Users\amartinez\AppData\Roaming\npm\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at C:\Users\amartinez\AppData\Roaming\npm\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (C:\Users\amartinez\AppData\Roaming\npm\node_modules\nightwatch\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (C:\Users\amartinez\AppData\Roaming\npm\node_modules\nightwatch\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (C:\Users\amartinez\AppData\Roaming\npm\node_modules\nightwatch\node_modules\q\q.js:796:13)
+    at C:\Users\amartinez\AppData\Roaming\npm\node_modules\nightwatch\node_modules\q\q.js:556:49
+    at runSingle (C:\Users\amartinez\AppData\Roaming\npm\node_modules\nightwatch\node_modules\q\q.js:137:13)
+    at flush (C:\Users\amartinez\AppData\Roaming\npm\node_modules\nightwatch\node_modules\q\q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    </system-err>
+  
+
+  
+  </testsuite>
+</testsuites>

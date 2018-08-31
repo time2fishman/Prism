@@ -1,15 +1,16 @@
-12:34:10.863 INFO [GridLauncherV3.launch] - Selenium build info: version: '3.13.0', revision: '2f0d292'
-12:34:10.866 INFO [GridLauncherV3$1.launch] - Launching a standalone Selenium Server on port 4445
-2018-07-31 12:34:10.987:INFO::main: Logging initialized @383ms to org.seleniumhq.jetty9.util.log.StdErrLog
-12:34:11.218 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4445
-12:34:11.495 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+17:34:42.038 INFO [GridLauncherV3.launch] - Selenium build info: version: '3.13.0', revision: '2f0d292'
+17:34:42.041 INFO [GridLauncherV3$1.launch] - Launching a standalone Selenium Server on port 4445
+2018-08-31 17:34:42.160:INFO::main: Logging initialized @393ms to org.seleniumhq.jetty9.util.log.StdErrLog
+17:34:42.384 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4445
+17:34:42.692 INFO [ActiveSessionFactory.apply] - Capabilities are: {
   "acceptSslCerts": true,
   "browserName": "chrome",
   "javascriptEnabled": true,
   "name": "Tests"
 }
-12:34:11.497 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.remote.server.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
-Starting ChromeDriver 2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab) on port 21631
+17:34:42.694 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.remote.server.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
+Starting ChromeDriver 2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab) on port 42115
 Only local connections are allowed.
-12:34:14.566 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
-12:34:14.792 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session a515643f213e7de2e8f4d78886bca5bd (org.openqa.selenium.chrome.ChromeDriverService)
+17:34:45.757 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
+17:34:45.996 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session ba68f9118c990524838738f14b173d6e (org.openqa.selenium.chrome.ChromeDriverService)
+17:35:01.373 INFO [ActiveSessions$1.onStop] - Removing session ba68f9118c990524838738f14b173d6e (org.openqa.selenium.chrome.ChromeDriverService)

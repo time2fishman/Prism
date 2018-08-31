@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="6">
+
+  <testsuite name="tests"
+    errors="0" failures="0" hostname="" id="" package="tests" skipped="0"
+    tests="6" time="18.82" timestamp="Fri, 31 Aug 2018 23:34:42 GMT">
+  
+    <testcase name="Marketstar Sign In" classname="tests" time="8.830" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Employee search full name" classname="tests" time="2.033" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Employee search first name only" classname="tests" time="1.708" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Employee search preferred/partial name only" classname="tests" time="2.056" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Employee search last name only" classname="tests" time="1.653" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="After an employee search; clicking the name link loads the employee page" classname="tests" time="2.544" assertions="7">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

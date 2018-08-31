@@ -4,6 +4,8 @@ module.exports = {
         assignWorkspaceButton: 'a[title="Assign Workspace"]',
         employmentHistoryButton: 'a[title="Employment History"]',
         chooseEmployeeToMergeAlert: '/html/body/div[3]/div[4]',
+        title: '/html/body/div[2]/div/h2',
+
     },
 
     accountPage: {
@@ -70,7 +72,8 @@ module.exports = {
         employeeSearchTitle: '/html/body/div[2]/div/h2',
         searchField: 'input[name="query"]',
         searchButton: 'input[type="submit"]',
-        searchResults: 'a[href="/PrismReview/Employee/Details/61045'
+        searchResults: 'div[class="container body-content"]',
+        cameronSmartNameLink: 'a[href="/PrismReview/Employee/Details/61045"]'
 
 
     },
@@ -80,7 +83,7 @@ module.exports = {
         nameField: '//*[@id="mainForm"]/div[1]/div[1]/div/div',
         dGraybealsEmployeesButton: 'a[href="/PrismReview/HiringManager/Index/559"]',
         cancelButton: '//*[@id="mainForm"]/div[2]/div[2]/a',
-        
+
 
     },
 
@@ -112,13 +115,40 @@ module.exports = {
 
     employmentHistoryPage: {
         prismEmployeeRecords: '/html/body/div[3]/div[5]/h3',
-        emloyementHistoryTitle: '/html/body/div[2]/div/h2',
+        employementHistoryTitle: '/html/body/div[2]/div/h2',
         viewButton: 'a[title="View"]',
         mergeButton: 'a[title="Merge"]',
         tranferredFromButton: 'a[title="Transferred From This Employee Record"]',
-        transferredToButton: 'a[title="Transferred To This Employee Record"]'
+        transferredToButton: 'a[title="Transferred To This Employee Record"]',
+        createNewButton: '/html/body/div[3]/div[7]/div/a'
 
     },
+
+    mergeEmployeeRecordsPage: {
+        title: '/html/body/div[2]/div/h2',
+        redMergeButton: 'a[title="merge"]',
+    },
+
+    createEmployeeRecordPage: {
+        contactTitle: 'label[for="ContactName"]',
+        contactField: '/html/body/div[3]/form/div/div[1]/div/div',
+        roleTitle: 'label[for="RoleId"]',
+        roleField: '/html/body/div[3]/form/div/div[2]/div/div/div[1]',
+        managerTitle: 'label[for="ManagerEmployeeId"]',
+        managerField: '/html/body/div[3]/form/div/div[3]/div/div/div[1]',
+        locationTitle: 'label[for="LocationId"]',
+        locationField: '/html/body/div[3]/form/div/div[4]/div/div/div[1]',
+        beginsOnTitle: 'label[for="beginsOn"]',
+        beginsOnField: 'input[id=BeginsOn"]',
+        beginsOnCalendarIcon: '/html/body/div[3]/form/div/div[5]/div/span[2]',
+        lastDayWorkedTitle: 'label[for="endsOn"]',
+        lastDayWorkedField: 'input[id="EndsOn"]',
+        lastDayWorkedCalendarIcon: '/html/body/div[3]/form/div/div[6]/div/span[2]',
+        createTasksTitle: 'label[for="CreateTasks"]',
+        createTasksCheckbox: 'input[type="checkbox"]',
+        submitButton: 'input[value="Submit"]',
+        cancelButton: 'a[title="Cancel"]',
+    }
 
 
 
