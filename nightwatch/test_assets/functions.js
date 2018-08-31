@@ -10,8 +10,8 @@ module.exports = {
             .click(selectors.accountPage.mkstxt)
             .useCss()
             .waitForElementVisible(selectors.signInPage.mks.userNameInput, 3000)
-            .setValue(selectors.signInPage.mks.userNameInput, 'amartinez@marketstar.com')
-            .setValue(selectors.signInPage.mks.passwordInput, 'Stacy.Piper.Jake1')
+            .setValue(selectors.signInPage.mks.userNameInput, '')
+            .setValue(selectors.signInPage.mks.passwordInput, '')
             .click(selectors.signInPage.mks.signInButton)
             .waitForElementVisible(selectors.header.employeeSearch, 3000)
     },
