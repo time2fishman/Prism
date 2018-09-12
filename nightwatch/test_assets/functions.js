@@ -29,7 +29,8 @@ module.exports = {
     /*Searches for the employee in quotes. Ends on Employee info page. Just need to change the name data to view different employees.*/
     employeeInfoPageFunc: function (browser) {
         browser
-            .verify.visible(selectors.header.employeeSearch, 3000)
+            .useCss()
+            .verify.visible(selectors.header.employeeSearch, 5000)
             .click(selectors.header.employeeSearch)
             .waitForElementVisible(selectors.employeeSearchPage.searchField, 3000)
             .setValue(selectors.employeeSearchPage.searchField, 'Smart')
@@ -41,6 +42,17 @@ module.exports = {
             .waitForElementVisible(selectors.employeePage.employeeNameTitle, 3000)
             .verify.containsText(selectors.employeePage.employeeNameTitle, 'Employee – Cam Smart')
             .verify.containsText(selectors.employeePage.nameField, 'Cam Smart')
+    },
+
+    //Tests the Assign Workspace button and page load
+    assignWorkspaceFunc: function (browser) {
+        browser
+            .useCss()
+            .verify.visible(selectors.globals.assignWorkspaceButton)
+            .click(selectors.globals.assignWorkspaceButton)
+            .waitForElementVisible(selectors.assignWorkspacePage.newWorkspaceLabel, 3000)
+            .verify.containsText(selectors.assignWorkspacePage.newWorkspaceLabel, '')
+            .verify.containsText(selectors.assignWorkspacePage.currentWorkspaceField, 'OGD-HQ-2-C036')
     }
 
 }

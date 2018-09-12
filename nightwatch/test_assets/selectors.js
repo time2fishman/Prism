@@ -83,6 +83,7 @@ module.exports = {
         nameField: '//*[@id="mainForm"]/div[1]/div[1]/div/div',
         dGraybealsEmployeesButton: 'a[href="/PrismReview/HiringManager/Index/559"]',
         cancelButton: '//*[@id="mainForm"]/div[2]/div[2]/a',
+      
 
 
     },
@@ -109,7 +110,8 @@ module.exports = {
 
     assignWorkspacePage: {
         newWorkspaceLabel: 'label[for="newWorkspace"]',
-        backButton: 'a[title="Back"]'
+        backButton: 'a[title="Back"]',
+        currentWorkspaceField: 'div[id="currentWorkspace"]'
 
     },
 

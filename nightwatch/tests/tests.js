@@ -56,6 +56,11 @@ module.exports = {
     'After an employee search; clicking the name link loads the employee page': browser => {
         functions.employeeInfoPageFunc(browser)
     },
+
+    'Assign Workspace button and page load check': browser => {
+        functions.employeeInfoPageFunc(browser)
+        functions.assignWorkspaceFunc(browser)
+    }
 }
 
 //     //This test checks that all elements are present in the Company Selection page and that the text says what it should on each element.
